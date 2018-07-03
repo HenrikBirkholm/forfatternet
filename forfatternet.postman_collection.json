@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "5a1d6e10-951d-6794-e45b-56a1e8bf5b1b",
+		"name": "forfatternet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Author, firstname, surname",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:4567/author?name=Matt Parker",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4567",
+					"path": [
+						"author"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Matt Parker"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Author, surname, firstname",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:4567/author?name=Mould, Steve",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4567",
+					"path": [
+						"author"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Mould, Steve"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authors, mixed list",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:4567/authors?list=H-C Jensen;Doe, Joe; Stephen King;Gibson, William",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4567",
+					"path": [
+						"authors"
+					],
+					"query": [
+						{
+							"key": "list",
+							"value": "H-C Jensen;Doe, Joe; Stephen King;Gibson, William"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
