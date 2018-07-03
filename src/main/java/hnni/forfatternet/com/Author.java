@@ -4,12 +4,12 @@ public class Author {
     private String firstname;
     private String surname;
 
-    public Author(String name) {
+    Author(String name) {
         if (name != null && !name.equalsIgnoreCase("")) {
             if (name.indexOf(",") > 0) { // comma notation used surname, firstname
                 int index = name.indexOf(",");
-                this.surname = name.substring(0, index-1).trim();
-                this.firstname = name.substring(index).trim();
+                this.surname = name.substring(0, index).trim();
+                this.firstname = name.substring(index+1).trim();
 
             } else { // regular notation firstname surname
                 int index = name.lastIndexOf(" ");

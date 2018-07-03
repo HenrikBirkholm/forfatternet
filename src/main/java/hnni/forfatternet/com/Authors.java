@@ -2,13 +2,13 @@ package hnni.forfatternet.com;
 
 import java.util.ArrayList;
 
-public class Authors {
+class Authors {
     private ArrayList<Author> authors;
 
-    public Authors (String list) {
-        authors = new ArrayList<Author>();
+    Authors(String list) {
+        authors = new ArrayList<>();
         if (list != null && !list.equalsIgnoreCase("")) {
-            String[] authorStrings = list.split(",");
+            String[] authorStrings = list.split(";");
             for (String authorString : authorStrings) {
                 authors.add(new Author(authorString));
             }
